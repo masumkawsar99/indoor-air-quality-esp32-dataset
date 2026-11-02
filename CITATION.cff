@@ -3,7 +3,10 @@ message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)"
 authors:
-  - name: "masumkawsar99"
+  - family-names: "Kawsar"
+    given-names: "MD Masum"
+    orcid: "https://orcid.org/0009-0005-3020-6274"
+    affiliation: "Daffodil International University"
 version: "1.0.0"
 doi: "10.5281/zenodo.23888099"
 date-released: "2026-11-02"

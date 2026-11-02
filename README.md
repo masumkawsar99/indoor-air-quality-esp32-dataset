@@ -121,7 +121,7 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 
 If you use this dataset, please cite it:
 
-> masumkawsar99 (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
+> Kawsar, MD Masum (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
 
 GitHub also shows the citation under **"Cite this repository"**.
 
