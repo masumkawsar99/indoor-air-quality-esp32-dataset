@@ -1,0 +1,9 @@
+{
+  "upload_type": "dataset",
+  "title": "Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)",
+  "creators": [{ "name": "masumkawsar99" }],
+  "description": "46,897 readings (one every 30 s, 16 October – 1 November 2026) from a low-cost indoor air monitor in Dhaka, Bangladesh, built from an ESP32, a Winsen MP-135 metal-oxide gas sensor and a DHT22 temperature/humidity sensor. Includes raw ADC values, sensor resistance, a humidity- and temperature-compensated ratio, a relative Pollution Index (100 = the room's usual level; not an official AQI), four air-quality classes, 2/5/10-minute-ahead class targets and a time-based calibration/development/test split. The training notebook and the ESP32 firmware with the on-device TinyML forecasting model are included.",
+  "license": "cc-by-4.0",
+  "keywords": ["indoor air quality", "low-cost sensor", "MOS gas sensor", "MP-135", "DHT22", "ESP32", "TinyML", "time series forecasting"],
+  "version": "1.0.0"
+}
