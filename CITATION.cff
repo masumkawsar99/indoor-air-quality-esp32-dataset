@@ -5,8 +5,12 @@ title: "Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monito
 authors:
   - name: "masumkawsar99"
 version: "1.0.0"
+doi: "10.5281/zenodo.23888099"
 date-released: "2026-11-02"
 license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23888099"
 repository-code: "https://github.com/masumkawsar99/indoor-air-quality-esp32-dataset"
 keywords:
   - indoor air quality

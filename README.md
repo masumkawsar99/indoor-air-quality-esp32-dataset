@@ -1,5 +1,7 @@
 # Indoor air quality dataset from a low-cost ESP32 monitor
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23888099.svg)](https://doi.org/10.5281/zenodo.23888099)
+
 Measurements from a low-cost indoor air monitor built from an **ESP32**, a **Winsen MP-135 metal-oxide (MOS) gas sensor**, a **DHT22** temperature and humidity sensor and an **SSD1306 OLED**. It logged one reading every 30 seconds in a room in Dhaka, Bangladesh, from **16 October to 1 November 2026**.
 
 This is the data behind the study *Low-Cost Indoor Air Quality Monitoring and Short-Term Forecasting on ESP32 Using a Humidity-Compensated MOS Sensor and TinyML*.
@@ -12,6 +14,7 @@ This is the data behind the study *Low-Cost Indoor Air Quality Monitoring and Sh
 | Missing values | none |
 | Files | `data/indoor_air_quality_esp32.csv` and the same table as `.xlsx` |
 | Licence | data CC BY 4.0, code MIT |
+| DOI | [10.5281/zenodo.23888099](https://doi.org/10.5281/zenodo.23888099) |
 
 > **Important:** the *Pollution Index* is a **relative** index for this room (100 = its usual level). It is **not** an official Air Quality Index, and the MP-135 cannot measure any single gas in ppm. Fine dust (PM2.5) is not measured.
 
@@ -116,7 +119,11 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 
 ## Citation
 
-If you use this dataset, please cite it. GitHub shows the citation under **"Cite this repository"**, and the DOI will be added here once it is archived on Zenodo.
+If you use this dataset, please cite it:
+
+> masumkawsar99 (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
+
+GitHub also shows the citation under **"Cite this repository"**.
 
 ## Licence
 
