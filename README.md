@@ -104,6 +104,7 @@ Class counts (`current_class`): Normal 33,483 · Slightly Elevated 10,724 · Ele
 1. Open `notebook/Air_Quality_TinyML_Training.ipynb` in [Google Colab](https://colab.research.google.com).
 2. Run all cells. With `DATA_SOURCE = 'upload'`, the notebook asks you to upload the dataset (`.xlsx` or `.csv`).
 3. The notebook trains the models, evaluates them on the test days at 2, 5 and 10 minutes, saves the figures and tables, and exports `aq_model.h` for the ESP32.
+4. Section 12c adds the statistical tests (block-bootstrap confidence intervals, Diebold–Mariano test, 10-day rolling-origin evaluation), the ablation studies, the extra baselines (linear trend, Holt, MLP, XGBoost) and the journal-style figures `Paper_Fig3` … `Paper_Fig7`. All numbers and figures in the paper are produced by this notebook.
 
 The on-device model is a LightGBM regressor (60 trees, 8 leaves) that predicts the change in the Pollution Index 10 minutes ahead. It was exported to C with m2cgen (about 60 KB) and takes about 86 µs per prediction on the ESP32.
 
@@ -117,11 +118,18 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 - MOS sensors respond to many gases at once (alcohol, VOCs, H₂, CO) and drift over time.
 - The DHT22 has an accuracy of about ±0.5 °C and ±2–5 % RH.
 
+## Versions
+
+| Version | Changes |
+|---|---|
+| 1.1.0 | Notebook: statistical tests, ablation, extra baselines and paper figures (section 12c). Data unchanged. |
+| 1.0.0 | First release: data 16 Oct – 1 Nov 2026, notebook, firmware, model. |
+
 ## Citation
 
 If you use this dataset, please cite it:
 
-> MD Masum Kawsar (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
+> MD Masum Kawsar (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
 
 GitHub also shows the citation under **"Cite this repository"**.
 
