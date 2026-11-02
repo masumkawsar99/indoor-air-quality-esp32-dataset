@@ -28,6 +28,9 @@ data/
   indoor_air_quality_esp32.xlsx     the same dataset as Excel
 notebook/
   Air_Quality_TinyML_Training.ipynb training and evaluation notebook (runs in Google Colab)
+results/
+  figures/                          paper figures (Paper_Fig3 … Paper_Fig7, PNG + PDF) from the Colab run
+  tables/                           all result tables (CSV) from the Colab run
 firmware/AirQualityLive/
   AirQualityLive.ino                ESP32 firmware (live index + on-device forecast)
   aq_model.h                        the trained LightGBM model exported to C
@@ -122,7 +125,7 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 
 | Version | Changes |
 |---|---|
-| 1.1.0 | Notebook: statistical tests, ablation, extra baselines and paper figures (section 12c). Data unchanged. |
+| 1.1.0 | Notebook: statistical tests, ablation, extra baselines and paper figures (section 12c); `results/` with the figures and tables from the Colab run. Data unchanged. |
 | 1.0.0 | First release: data 16 Oct – 1 Nov 2026, notebook, firmware, model. |
 
 ## Citation

@@ -1,0 +1,4 @@
+phase,rows,MAE_persistence,MAE_TinyML,improvement_pct
+Spray onset (rise to peak),50,51.79,51.59,0.39
+After spray (decay to normal),441,29.86,21.81,26.95
+Normal periods,7595,4.5,3.99,11.33
