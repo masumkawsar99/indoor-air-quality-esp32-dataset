@@ -12,7 +12,7 @@ This is the data behind the study *Low-Cost Indoor Air Quality Monitoring and Sh
 | Period | 2026-10-16 00:00 – 2026-11-01 22:06, local time (Asia/Dhaka, UTC+6) |
 | Columns | 19 |
 | Missing values | none |
-| Files | `data/indoor_air_quality_esp32.csv` and the same table as `.xlsx` |
+| Files | `data/indoor_air_quality_esp32.csv` and the same table as `.xlsx`; live-deployment log `data/live_deployment_2026-11-02_03.csv` |
 | Licence | data CC BY 4.0, code MIT |
 | DOI | [10.5281/zenodo.23888099](https://doi.org/10.5281/zenodo.23888099) |
 
@@ -92,6 +92,18 @@ In this room, the Spike events were caused by air-freshener sprays.
 | `target_label` | 0–3 | Class 10 minutes later (20 readings ahead); the main forecasting target |
 | `split` | text | `calibration`, `development` or `test` (see below) |
 
+## Live-deployment log
+
+`data/live_deployment_2026-11-02_03.csv` (3,374 rows, 2 Nov 2026 18:15 – 3 Nov 23:05) was recorded after the model was trained, with the final firmware running the TinyML model on the ESP32. Every row holds the values computed **on the device**:
+
+| Column | Description |
+|---|---|
+| `Time`, `Temp C`, `Humidity %`, `gas_adc`, `rs`, `ratio` | as in the main dataset |
+| `Pollution Index`, `Air Quality` | index and class computed on the ESP32 (empty during the 1-h warm-up after a restart) |
+| `forecast_index_10min`, `forecast_class_10min` | 10-minute forecast computed on the ESP32 (empty during the 2-h warm-up after a restart) |
+
+The device restarted twice (3 Nov 01:43 and 20:04) after short power interruptions. Section 12d of the notebook evaluates this log.
+
 ## Time-based split
 
 | Split | Dates | Rows | Use |
@@ -125,6 +137,7 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 
 | Version | Changes |
 |---|---|
+| 1.2.0 | Live-deployment log (26 h of forecasts computed on the ESP32) and notebook section 12d that evaluates it. |
 | 1.1.0 | Notebook: statistical tests, ablation, extra baselines and paper figures (section 12c); `results/` with the figures and tables from the Colab run. Data unchanged. |
 | 1.0.0 | First release: data 16 Oct – 1 Nov 2026, notebook, firmware, model. |
 
@@ -132,7 +145,7 @@ To use the firmware, open `firmware/AirQualityLive/AirQualityLive.ino` in the Ar
 
 If you use this dataset, please cite it:
 
-> MD Masum Kawsar (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
+> MD Masum Kawsar (2026). *Indoor air quality dataset from a low-cost ESP32 + MP-135 + DHT22 monitor (Dhaka, October–November 2026)* (Version 1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23888099
 
 GitHub also shows the citation under **"Cite this repository"**.
 
